@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+  background-color: rgb(218, 7, 255);
+}
+
+h1,
+h3, 
+h4,
+h5,
+p {
+    color: rgb(37, 255, 8);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+span a:link {
+  color: rgb(0, 0, 0);
+  text-decoration: solid;
+}
+
+span a:visited {
+  color: rgb(0, 0, 0);
+  text-decoration: solid;
+}
+
+.title {
+  margin: auto;
+}
+
+button {
+  margin-left: 2px;
+}
+
+.cover-img {
+  height: 800px;
+  width: 600px;
+  margin: 20px 0;
+}
+
+.heading {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 20px;
+}
+
+.header {
+  margin-top: 15px;
+}
+
+span {
+  margin: 0 10px;
+}
+
+.searchbar {
+  float: right;
+  margin-right: 10px;
+}
+
+.dropdown {
+  float: left;
+  margin-left: 10px;
+}
+
+.results {
+  margin-top: 100px;
+}
+
+.fav-button {
+  margin-bottom: 40px;
+}
+
+.not-found {
+  margin-top: 50px
+}
+
+main,
+.add {
+  min-height: 100vh;
+}
+
+.newCharacter {
+  display: grid;
+  width: 500px;
+  margin: auto;
+}
+
+.button {
+  margin: 10px auto;
+  width: 100px;
+}
+
+.input {
+  margin-top: 15px;
+  height: 40px;
+}
+
+.new-img {
+  height: 300px;
+  width: 300px;
+  margin: auto;
+}
+
+.delete {
+  margin-bottom: 30px;
+}
+
+.new-card {
+  margin-top: 30px;
+}
