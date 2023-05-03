@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NewCharacterContainer from './Components/NewCharacterContainer';
 import Home from './Components/Home';
 import Title from './Components/Title';
+import NoPageFound from './Components/NoPageFound';
 
 function App() {
 
@@ -13,7 +14,6 @@ function App() {
   const [species, setSpecies] = useState("All")
   const [filtered, setFiltered] = useState(results)
   const [all, setAll] = useState(results)
-  const [fav, setFav] = useState("")
 
   useEffect(() => {
     fetch("https://rickandmortyapi.com/api/character")
@@ -59,10 +59,6 @@ function App() {
     setResults(filteredResults);
   }
 
-  function setFavCharacter(fav) {
-    setFav(fav)
-  }
-
   return (
     <div className="App">
       <Router>
@@ -70,13 +66,12 @@ function App() {
         <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/result-container" element={<ResultContainer 
+            <Route path="/characters" element={<ResultContainer 
             results={results} 
-            setFavCharacter={setFavCharacter} 
             dropdownFilter={dropdownFilter} 
-            searchFilter={searchFilter} 
-            fav={fav}/>} />
-            <Route path="/add-character" element={<NewCharacterContainer />} />
+            searchFilter={searchFilter}/>} />
+            <Route path="/create-character" element={<NewCharacterContainer />} />
+            <Route path="*" element={<NoPageFound />} />
           </Routes>
       </Router>
     </div>

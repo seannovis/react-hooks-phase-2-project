@@ -3,11 +3,12 @@ import React, { useState } from "react";
 
 function ResultCard({result, setFavCharacter}) {
 
-    const [fav, setFav] = useState("")
+    const [fav, setFav] = useState(result.name)
 
-    function handleClick() {
-        setFav(result.name)
+    function handleClick(result) {
+        result.name = fav
         setFavCharacter(fav)
+
     }
 
     return (

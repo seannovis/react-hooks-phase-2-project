@@ -72,15 +72,26 @@ span {
   margin-top: 50px
 }
 
+.no-page {
+  padding-top: 30vh;
+}
+
 main,
-.add {
+.add,
+.no-page {
   min-height: 100vh;
 }
 
 .newCharacter {
   display: grid;
-  width: 500px;
+  width: 300px;
   margin: auto;
+}
+
+.add-dropdown {
+  display: grid;
+  margin-top: 10px;
+  height: 50px;
 }
 
 .button {

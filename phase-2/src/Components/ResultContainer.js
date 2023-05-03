@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import ResultCard from "./ResultCard";
 import Search from "./Search";
 import Dropdown from "./Dropdown";
@@ -6,7 +6,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function ResultContainer({results, setFavCharacter, searchFilter, dropdownFilter, fav}) {
+function ResultContainer({results, setFavCharacter, searchFilter, dropdownFilter}) {
+    
+    const [fav, setFav] = useState("")
+
+    function setFavCharacter(fav) {
+        setFav(fav)
+      }
 
     return (
         <main>
@@ -25,7 +31,7 @@ function ResultContainer({results, setFavCharacter, searchFilter, dropdownFilter
                 <Row>
                     {results.map((result) => (
                     <Col key={result.id} sm={6} md={4} lg={3}>
-                    <ResultCard fav={fav} setFavCharacter={setFavCharacter} result={result} />
+                    <ResultCard setFavCharacter={setFavCharacter} result={result} />
                     </Col>
                     ))}
                 </Row>

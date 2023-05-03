@@ -20,9 +20,9 @@ function AddCharacter({onAddCharacter, characters}) {
 
       setName("");
       setImage("");
-      setStatus("");
-      setSpecies("");
-      setGender("");
+      setStatus(status);
+      setSpecies(species);
+      setGender(gender);
 
       fetch("http://localhost:4000/characters", {
         method: "POST",
@@ -44,9 +44,37 @@ function AddCharacter({onAddCharacter, characters}) {
             <form className="newCharacter" onSubmit={handleSubmit}>
               <input className="input" type="text" id="name" placeholder="Character Name" value={name} onChange={(e) => setName(e.target.value)}/>
               <input className="input" type="text" id="image" placeholder="Image Link" value={image} onChange={(e) => setImage(e.target.value)}/>
-              <input className="input" type="text" id="status" placeholder="Character Status" value={status} onChange={(e) => setStatus(e.target.value)}/>
-              <input className="input" type="text" id="species" placeholder="Character Species" value={species} onChange={(e) => setSpecies(e.target.value)}/>
-              <input className="input" type="text" id="gender" placeholder="Character Gender" value={gender} onChange={(e) => setGender(e.target.value)}/>
+
+              <label className="add-dropdown">
+              Status: 
+              <select name="add-status" onChange={(e) => setStatus(e.target.value)}>
+                <option value="Select">Select Status</option>
+                <option value="Alive">Alive</option>
+                <option value="Dead">Dead</option>
+              </select>
+              <br></br>
+              </label>
+
+              <label className="add-dropdown">
+              Species: 
+              <select name="add-species" onChange={(e) => setSpecies(e.target.value)}>
+                <option value="Select">Select Species</option>
+                <option value="Human">Human</option>
+                <option value="Alien">Alien</option>
+              </select>
+              <br></br>
+              </label>
+
+              <label className="add-dropdown">
+              Gender: 
+              <select name="add-gender" onChange={(e) => setGender(e.target.value)}>
+                <option value="Select">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+              <br></br>
+              </label>
+
               <button type="submit" className="button">Submit</button>
             </form>
 

@@ -10,11 +10,11 @@ function Header() {
                 </span>
                 
                 <span>
-                    <Link to="result-container">Browse Characters</Link>
+                    <Link to="characters">Browse Characters</Link>
                 </span>
               
                 <span>
-                    <Link to="add-character">Create Character</Link>
+                    <Link to="create-character">Create Character</Link>
                 </span>
             </nav>
 
